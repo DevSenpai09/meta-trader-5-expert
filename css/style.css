@@ -1,5 +1,6 @@
 :root {
   --primary-blue: #26578a;
+  --secondary-blue: #010121;
   --very-light-blue: #f5f7fe;
   --white: #ffffff;
   --text-grey: #777777;
@@ -23,10 +24,15 @@ body {
 
 button {
   cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
 }
 
 section {
-  padding: 48px 32px;
+  padding: 40px 24px;
 }
 
 section h2 {
@@ -34,12 +40,12 @@ section h2 {
 }
 
 /* LOGO */
-#logo {
+.logo-text {
   font-size: 1.4em;
   color: white;
 }
 
-#logo span {
+.logo-text span {
   color: var(--primary-blue);
 }
 
@@ -49,10 +55,38 @@ header {
   grid-auto-flow: column;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 32px;
+  padding: 20px 24px;
   position: fixed;
   width: 100%;
   z-index: 10;
+  transition: 0.2s;
+}
+
+header .logo {
+  display: grid;
+  grid-auto-flow: column;
+  width: max-content;
+  align-items: center;
+  gap: 10px;
+}
+
+header .logo .img-container {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+header .logo img {
+  width: 160%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header .logo .logo-text {
+  display: none;
 }
 
 header nav {
@@ -61,12 +95,22 @@ header nav {
   gap: 32px;
 }
 
-header nav button {
+header nav a {
   text-transform: capitalize;
   background-color: transparent;
   border: none;
   font-size: 1em;
   color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+header nav a:hover {
+  opacity: 0.8;
+}
+
+header.active {
+  background-color: var(--secondary-blue);
 }
 
 /* SECTION - HERO  */
@@ -100,7 +144,7 @@ section#hero .content {
   place-content: center;
   grid-area: -1/1;
   position: relative;
-  padding: 0 32px;
+  padding: 0 24px;
   text-align: center;
   color: white;
   max-width: 650px;
@@ -130,7 +174,62 @@ section#hero .content button {
   width: max-content;
 }
 
-/* SECTION - TRUSTED WORLDWIDE  */
+/* SECTION - FEATURES  */
+section#features {
+  display: grid;
+  gap: 32px;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+section#features .feature {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  max-width: 500px;
+  margin: 0px auto;
+}
+
+section#features .feature img {
+  width: 300px;
+  margin: auto;
+}
+
+/* SECTION - COPY TOP INVESTORS  */
+section#copy-top-investors {
+  display: grid;
+  background-color: var(--secondary-blue);
+  color: white;
+  gap: 32px;
+  align-items: center;
+}
+
+section#copy-top-investors video {
+  width: 100%;
+}
+
+section#copy-top-investors .content p {
+  font-weight: 300;
+  font-size: clamp(1.5em, 3vw, 1.8em);
+  margin-top: 20px;
+}
+
+section#copy-top-investors .content span {
+  font-weight: 500;
+}
+
+section#copy-top-investors button {
+  margin-top: 40px;
+  border: 1px solid var(--primary-blue);
+  padding: 15px 40px;
+  border-radius: 8px;
+  background-color: var(--primary-blue);
+  color: var(--white);
+  font-size: 1em;
+  font-weight: 600;
+}
+
+/* SECTION - TRUSTED WORLWIDE  */
 section#trusted-worldwide {
   background-color: var(--very-light-blue);
 }
@@ -266,4 +365,129 @@ section#mining-top-crypto-currencies .card .price {
   font-size: 1.6em;
   font-weight: 600;
   margin-top: 10px;
+}
+
+/* SECTION - FAQ  */
+section#faq h2 {
+  text-align: center;
+}
+
+section#faq .faqs-container {
+  display: grid;
+  gap: 20px;
+  align-content: start;
+  max-width: 768px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+section#faq .faqs {
+  display: grid;
+  gap: 20px;
+  align-content: start;
+}
+
+section#faq .faqs .faq {
+  box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+section#faq .faqs .faq .ques {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 10px;
+}
+
+section#faq .faqs .faq .ques p {
+  font-size: clamp(1.1em, 3vw, 1.3em);
+}
+
+section#faq .faqs .faq .ques .arrow {
+  font-size: clamp(28px, 3vw, 32px);
+}
+
+section#faq .faqs .active .ques .arrow-up {
+  display: block;
+}
+
+section#faq .faqs .active .ques .arrow-down {
+  display: none;
+}
+
+section#faq .faqs .inactive .ques .arrow-up {
+  display: none;
+}
+
+section#faq .faqs .inactive .ques .arrow-down {
+  display: block;
+}
+
+section#faq .faqs .faq .ans {
+  max-height: 0px;
+  overflow: hidden;
+  color: var(--text-grey);
+  font-weight: 300;
+  font-size: 1.2em;
+  display: grid;
+  gap: 10px;
+  transition: 0.2s;
+}
+
+section#faq .faqs .active .ans {
+  max-height: 1000px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+footer {
+  background-color: var(--secondary-blue);
+  padding: 48px 24px;
+  color: var(--white);
+  display: grid;
+  gap: 40px;
+}
+
+footer img {
+  width: 100px;
+}
+
+footer .mail {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+footer .navs {
+  display: grid;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+footer .navs .nav {
+  display: grid;
+  gap: 10px;
+}
+
+footer .navs .nav .title {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+footer .navs .nav .links {
+  display: grid;
+  gap: 10px;
+}
+
+footer .navs .nav .links a {
+  text-decoration: none;
+  color: var(--primary-blue);
+  font-size: 1.1em;
 }

@@ -1,3 +1,47 @@
+@media only screen and (min-width: 640px) {
+  section {
+    padding: 48px 32px;
+  }
+}
+
+/* SECTION - HEADER  */
+@media only screen and (min-width: 640px) {
+  header {
+    padding: 20px 32px;
+  }
+
+  header .logo .logo-text {
+    display: block;
+  }
+}
+
+/* SECTION - HERO  */
+@media only screen and (min-width: 640px) {
+  section#hero .content {
+    padding: 0px 32px;
+  }
+}
+
+/* SECTION - FEATURES  */
+@media only screen and (min-width: 768px) {
+  section#features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  section#features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* SECTION - COPY TOP INVESTORS  */
+@media only screen and (min-width: 768px) {
+  section#copy-top-investors {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* SECTION - TRUSTED WORLWIDE  */
 @media only screen and (min-width: 640px) {
   section#trusted-worldwide .cards-container {
@@ -35,5 +79,27 @@
 @media only screen and (min-width: 960px) {
   section#mining-top-crypto-currencies .cards-container {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* SECTION - FAQ  */
+@media only screen and (min-width: 1200px) {
+  section#faq .faqs-container {
+    max-width: 1200px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* FOOTER  */
+@media only screen and (min-width: 960px) {
+  footer {
+    padding: 40px 20px;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  footer .navs {
+    grid-auto-flow: column;
   }
 }

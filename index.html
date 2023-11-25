@@ -10,24 +10,43 @@
       href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
-    <header>
+    <header id="header" class="">
       <!-- Logo -->
-      <h1 id="logo">MetaTrader5<span>Expert</span></h1>
+      <div class="logo">
+        <div class="img-container">
+          <img src="./assets/logo.png" alt="Logo" />
+        </div>
+        <h1 class="logo-text">MetaTrader5<span>Expert</span></h1>
+      </div>
 
       <nav>
-        <button>contact us</button>
-        <button>Register</button>
-        <button>Login</button>
+        <a>contact us</a>
+        <a>Register</a>
+        <a>Login</a>
       </nav>
     </header>
 
     <!-- HERO SECTION -->
     <section id="hero">
-      <video src="./assets/hero-section.mp4" autoplay></video>
+      <video
+        id="hero-vid"
+        src="./assets/hero-section.mp4"
+        autoplay="true"
+        muted="muted"
+        loop="true"
+      ></video>
       <div class="dark-bg"></div>
       <div class="content">
         <h2>Experience the Difference</h2>
@@ -35,7 +54,102 @@
           MetaTrader5 Expert is the world’s leading trading and mining platform
           that allows people to grow their portfolio and financial experience
         </p>
-        <button>Start Investing</button>
+        <button onclick="playVid()">Start Investing</button>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features">
+      <div class="feature">
+        <img
+          src="./assets/daily-mining-outputs.png"
+          alt="Daily Mining Outputs Illustration"
+        />
+        <h3>Daily Mining Outputs</h3>
+        <p>
+          Returns made from either trading or mining transactions will be added
+          to your account daily and automatically.
+        </p>
+      </div>
+
+      <div class="feature">
+        <img
+          src="./assets/state-of-the-art-mining.png"
+          alt="State of the Art Mining Illustration"
+        />
+        <h3>State of the Art Mining</h3>
+        <p>
+          Productivity is a top notch quality for any investment. So, for every
+          trade action or blockchain mining algorithm that we offer, we’re
+          providing some of the highest performing systems and softwares that
+          exist
+        </p>
+      </div>
+
+      <div class="feature">
+        <img
+          src="./assets/diverse-mining-portfolio.png"
+          alt="Diverse Mining Portfolio Illustration"
+        />
+        <h3>Diverse Mining Portfolio</h3>
+        <p>
+          Choose from a wide range of target assets for trading and over 10
+          major mining algorithms that cut across 4 mineable cryptocurrencies
+        </p>
+      </div>
+
+      <div class="feature">
+        <img
+          src="./assets/hardware-is-already-running.png"
+          alt="Hardware is already running Illustration"
+        />
+        <h3>Hardware is already running</h3>
+        <p>
+          Don’t wrestle with rig assembly and hot, noisy miners at home. We have
+          the fastest bitcoin mining hardware running for you already
+        </p>
+      </div>
+
+      <div class="feature">
+        <img
+          src="./assets/intuitive-dashboard.png"
+          alt="Intuitive Dashboard Illustration"
+        />
+        <h3>Intuitive Dashboard</h3>
+        <p>
+          All the financial instruments data and charts that you need, when you
+          need them
+        </p>
+      </div>
+
+      <div class="feature">
+        <img
+          src="./assets/secure-and-private.png"
+          alt="Secure and Private Illustration"
+        />
+        <h3>Secure and Private</h3>
+        <p>
+          We value the privacy of our users, so we strive to keep collected user
+          data to a minimum level.
+        </p>
+      </div>
+    </section>
+
+    <!-- COPY TOP INVESTORS SECTION -->
+    <section id="copy-top-investors">
+      <video
+        id="copy-top-investors-vid"
+        src="./assets/copy-top-investors.mp4"
+        muted="muted"
+      ></video>
+      <div class="content">
+        <h2>Copy top investors</h2>
+        <p>
+          With MetaTrader5 Expert innovative CopyTrader™, you can automatically
+          copy the moves of other investors. Find investors you believe in and
+          <span>replicate their actions</span> in real time.
+        </p>
+        <button>Start Copying</button>
       </div>
     </section>
 
@@ -82,7 +196,7 @@
       </div>
     </section>
 
-    <!-- TRUSTED WORLDWIDE SECTION -->
+    <!-- SMART PORTFOLIOS SECTION -->
     <section id="smart-portfolios">
       <div class="content">
         <h2>Smart Portfolios</h2>
@@ -94,7 +208,11 @@
         </p>
         <button>Explore Portfolios</button>
       </div>
-      <video src="./assets/smart-portfolios.mp4" autoplay></video>
+      <video
+        id="smart-portfolios-vid"
+        src="./assets/smart-portfolios.mp4"
+        muted="muted"
+      ></video>
     </section>
 
     <!-- MINING TOP CRYPTO CURRENCIES SECTION -->
@@ -140,5 +258,543 @@
         </div>
       </div>
     </section>
+
+    <!--FAQ  -->
+    <section id="faq">
+      <h2>FAQ</h2>
+
+      <div class="faqs-container">
+        <!-- Faq Set 1 -->
+        <div class="faqs">
+          <div class="faq inactive">
+            <div class="ques">
+              <p>How does copy trading work?</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                Here is how the copier works: You, as an investor, simply select
+                an expert or experts that you want to copy trades from. Once you
+                are signed up, this is the only action needed on your part.
+              </p>
+              <p>
+                Once you’ve taken care of the above, you are all set. There are
+                no codes that you need to run or signals for you to manually
+                input. Our software will handle the trade copying automatically
+                on your behalf. We monitor your experts trading activity and as
+                soon as there is a trade, we calculate all the necessary
+                parameters and execute the trade.
+              </p>
+              <p>
+                The only thing you have to make sure of is that you have enough
+                available base currency that your expert trades with, in your
+                trading account. How much is enough? First, you must meet the
+                exchanges minimum order amount (let’s say about $10 per trade to
+                be safe). That means that if your expert executes a 5% order,
+                you must have at least $300 in your account total value (at 100%
+                expert allocation as an example). This also means that you need
+                to have at least 10% or higher in available base currency to
+                avoid missed trades.
+              </p>
+              <p>
+                When the expert exits a position, you too will exit it.
+                Automatically. You can also change allocation at any time.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq inactive">
+            <div class="ques">
+              <p>What are the fees?</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                Every investor is to pay a 15% withdrawal fee to complete
+                withdrawal process and each trader gets a set percentage of the
+                profit they make.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq inactive">
+            <div class="ques">
+              <p>How does Bitcoin mining work</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                It’s quick and very easy! As soon as we receive your payment
+                your contract will be added to your profile, and you can
+                immediately start mining. Depending on the blockchain algorithm
+                you select and the associated mining service agreement you enter
+                into, you can either mine native cryptocurrencies directly or
+                allocate your hashpower to other cryptocurrencies (marked with
+                AUTO), and even choose a specific allocation for them. For
+                example: 60% LTC, 20% BTC and 20% DOGE. The first mining output
+                is released after 48 hours, and then a daily mining output will
+                follow.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq inactive">
+            <div class="ques">
+              <p>Are you mining for yourself?</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                Besides the fact that we ourselves mine with the very same
+                hardware that we offer to our clients, our capital is limited.
+                We believe that Bitcoin and Altcoin mining is one of the best
+                ways to receive Cryptocurrencies, however, we do not want to
+                “put all our eggs in one basket”.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq inactive">
+            <div class="ques">
+              <p>Where is your mining farm located?</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                For security reasons, we do not disclose the exact location of
+                our mining farms. As of April 2015, we are operating several
+                mining farms that are located in Europe, America and Asia.
+                Electricity cost and availability of cooling are important, but
+                not the only criteria. See our Datacenters page for more
+                information.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq inactive">
+            <div class="ques">
+              <p>What coins I mine with each algorithm?</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                You are able to mine Bitcoin and various altcoins directly via
+                our mining allocation page*. The availability of
+                cryptocurrencies you can mine depends on the contract you have
+                chosen.
+              </p>
+              <p>
+                You must allocate your hashpower in order to determine the
+                cryptocurrency received for your mining output. If no allocation
+                has been made, the mining output will default to the following
+                for the given blockchain algorithm:
+              </p>
+              <p>
+                SHA-256 contract - Bitcoin<br />
+                Ethash contract - Ethereum<br />
+                (*) “MetaTrader5 Expert Advanced Allocation” (special feature):
+                It allows you to get mining outputs in many different coins even
+                if they are not mined directly by a certain algorithm. For
+                example, you can get mining outputs in BTC while mining with an
+                X11 algorithm! That is possible by mining the DASH coin
+                directly, which is then automatically swapped to BTC by our
+                algorithmic framework. The Allocation function is designed for
+                customers to receive delivery of their mining results in their
+                preferred cryptocurrency. We call it “mining BTC the smart way”.
+                The same technique is also used to get mining results in LTC
+                with a SHA-256 contract, etc.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq inactive">
+            <div class="ques">
+              <p>How do your ether contracts work?</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                When you purchase an Ether mining contract, you buy a share of a
+                GPU (“graphics processing unit“) to mine Ethereum. The hashing
+                algorithm used to mine Ether is called Ethash (or
+                Dagger-Hashimoto).
+              </p>
+              <p>
+                Ethash requires the so called DAG file in order to perform the
+                calculations. This file grows over time, which means that more
+                operations for each hashing operation need to be performed. This
+                means that the effective hashrate decreases a little each time
+                the DAG file grows.
+              </p>
+              <p>
+                This has to be considered when comparing the theoretical output
+                of your hashpower. Online calculators do not take this into
+                account.
+              </p>
+              <p>
+                Also, please keep in mind that some of our products have a
+                maintenance fee attached.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Faq Set 2 -->
+        <div class="faqs">
+          <div class="faq inactive">
+            <div class="ques">
+              <p>Who are the trading experts?</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                We carefully select expert applicants. We get to know them as a
+                trader and examine their trading performance over a period of
+                time. We also tend to look for expert who already have a
+                following to further confirm their competence (social proof).
+                You can also read about every expert on their individual
+                performance pages.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq inactive">
+            <div class="ques">
+              <p>What is the recommended amount to start with?</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                We suggest to have around $3000-$5000 in your account in BTC
+                value due to exchanges minimum order requirements and so that
+                you can at least cover the subscription cost every month.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq inactive">
+            <div class="ques">
+              <p>What are the expected returns?</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                Bitcoin and altcoin mining depends highly on the prices and
+                network difficulties of the Cryptocurrencies that you are
+                mining, which cannot be predicted. It would not “look right” if
+                we would provide data on the mining performance and sell
+                contracts at the same time. Therefore, we recommend all our
+                clients to do their own research and do their own performance
+                calculation.
+              </p>
+              <p>
+                For example, you might want to have a look at coinwarz.com.
+                Remember that some of our products have a daily maintenance fee
+                which must be deducted from the daily mining rewards.
+              </p>
+              <p>
+                Please note that the website is an independent source of
+                reference and not related to MetaTrader5 Expert in any manner.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq inactive">
+            <div class="ques">
+              <p>Which pools are you using for mining?</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                We do not publish a list of pools we are using. Our main
+                criteria for a good pool are: reliability, fee structure and
+                reject rate. Going forward we will solo-mine a few coins (and
+                pass the fee savings to our users!).
+              </p>
+              <p>
+                Our internal policy is: “be a good crypto citizen”. This means,
+                that we will at least use two different pools (in some cases we
+                use up to four) for each coin. This is to preserve the
+                decentralized nature of the crypto networks! If we become aware
+                that a pool is getting close to 50% share, we will switch away
+                from it and use a backup instead.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq inactive">
+            <div class="ques">
+              <p>Isn't buying hardware cheaper?</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                On the first glance one might think that buying miner X is
+                slightly cheaper than hosted mining. However, there are a number
+                of “hidden” costs related to purchasing and maintaining a miner
+                that change the economics significantly:
+              </p>
+              <p>
+                Shipping costs: few merchants will cover this, but in most cases
+                they will charge you extra.
+              </p>
+              <p>
+                Customs dues / VAT: if it is an international delivery you will
+                likely have to pay customs dues and VAT; generally this has a
+                huge impact on the total cost of your mining equipment.
+              </p>
+              <p>
+                Delivery time: when you pay for your device you have to wait
+                until the miner is packaged and shipped; if it is held up in the
+                customs this can take weeks. And during that time you cannot
+                mine at all (“opportunity costs”). You have to wait and hope.
+                And if the merchant has a stock shortage; it is you who has to
+                wait. WithMetaTrader5 Expert you pay and get your hashpower
+                immediately online. No delays!
+              </p>
+              <p>
+                Costs for additional equipment: when buying miners from larger
+                retailers you often have to buy additional equipment like an
+                extra PSU that matches the electricity specs for your country,
+                control units and specific shelves to store them efficiently.
+                This adds up significantly to the overall price for hashpower.
+              </p>
+              <p>
+                Setting the system up: when the device finally arrived you have
+                to assemble and configure it. Beginners often underestimate the
+                amount of work and technical knowledge that is needed to bring
+                the device up and optimize its settings. People that used the
+                first ASICs spend days and weeks on it. In monetary terms this
+                costs you twice: (i) your time and (ii) lost mining opportunity.
+              </p>
+              <p>
+                Maintenance: hardware failures, outages and crashes could lead
+                to downtimes between seconds and weeks. If your unit breaks you
+                have to return it and start from scratch (by the way: check the
+                guarantee time of your miner; it is often less than a year).
+                With MetaTrader5 Expert you have a guaranteed uptime of 100%: in
+                case one of your units fails another unit will be switched over
+                and start mining for you the very same second.
+              </p>
+              <p>
+                Electricity: having the machines at home not only brings heat
+                and noise, but also an increase of your electricity bill; an
+                important factor that many underestimate. Please do not get us
+                wrong: we do not want to discourage anyone from mining at home!
+                We are often asked about prices and realized that many users do
+                not know about all the hidden costs. If you compare the true
+                costs, you will notice that our prices are very competitive. We
+                want to provide you the best possible mining experience, so that
+                you can focus on mining your favorite coins (and we take care of
+                the rest).
+              </p>
+            </div>
+          </div>
+
+          <div class="faq inactive">
+            <div class="ques">
+              <p>What is the maintenance fee?</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                Some of our products have a maintenance fee attached. The
+                maintenance fee covers all costs related to mining including,
+                inter alia:
+              </p>
+              <p>
+                electricity cost<br />
+                cooling<br />
+                maintenance work<br />
+                hosting services
+              </p>
+              <p>
+                The fee is fixed in USD but deducted from the daily mining
+                rewards in the natively mined coin on a daily basis.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq inactive">
+            <div class="ques">
+              <p>How can I mine different coins at the same time?</p>
+              <div class="arrows">
+                <span class="material-symbols-outlined arrow arrow-down">
+                  arrow_drop_down
+                </span>
+                <span class="material-symbols-outlined arrow arrow-up">
+                  arrow_drop_up
+                </span>
+              </div>
+            </div>
+            <div class="ans">
+              <p>
+                MetaTrader5 Expert allows its clients to mine different types of
+                coins at the same time. You decide which coins you prefer and
+                you can allocate hashpower accordingly.
+              </p>
+              <p>
+                Each mining algorithm is set up with a default delivery
+                cryptocurrency. The MetaTrader5 Expert Advanced Auto-Allocation
+                (in short “AUTO”) will apply to all cryptocurrencies which
+                cannot be mined directly. In the user interface go to “Mining
+                Allocation” and choose the hashpower allocation that is best for
+                you. When you are done press “save allocation”.
+              </p>
+              <p>
+                Remember that the cryptocurrencies marked with (AUTO) are not
+                directly mined, as mentioned in the “What coins can I mine?”
+                section of this Customer Service page.
+              </p>
+              <p>
+                In order to get the mining output, please ensure to add your
+                wallet address(es) to your MetaTrader5 Expert profile. Find out
+                more details about how to add your wallet(s) in the next
+                section.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        <img src="./assets/logo.png" alt="Logo" />
+        <h1 class="logo-text">MetaTrader5<span>Expert</span></h1>
+        <div class="mail">
+          <span class="material-symbols-outlined"> mail </span>
+          <p>info@metatrader5expert.com</p>
+        </div>
+      </div>
+
+      <div class="navs">
+        <div class="nav">
+          <p class="title">Top Instruments</p>
+          <div class="links">
+            <a href="">Apple</a>
+            <a href="">Shiba</a>
+            <a href="">Bitcoin</a>
+            <a href="">Ethereum</a>
+          </div>
+        </div>
+
+        <div class="nav">
+          <p class="title">Learn More</p>
+          <div class="links">
+            <a href="">About Us</a>
+            <a href="">What is Leverage</a>
+            <a href="">Responsible Trading</a>
+            <a href="">How Copy Trading</a>
+            <a href="">Works</a>
+          </div>
+        </div>
+
+        <div class="nav">
+          <p class="title">Privacy</p>
+          <div class="links">
+            <a href="">Cookie Policy</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms & Conditions</a>
+            <a href="">General Risk</a>
+            <a href="">Disclosure</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
